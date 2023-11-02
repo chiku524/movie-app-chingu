@@ -6,23 +6,23 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between ">
       <nav className='navbar'>
         <div className='nav'>
-          <div className='home-btn btn'>
-            <p2>HOME</p2>
-          </div>
-          <div className='movies-btn btn'>
-            <p2>MOVIES</p2>
-          </div>
-          <div className='movies-btn btn'>
-            <p2>MOVIES</p2>
-          </div>
+          <Link href="/" className='home-btn btn'>
+            <h2>HOME</h2>
+          </Link>
+          <Link href="/movies" className='movies-btn btn'>
+            <h2>MOVIES</h2>
+          </Link>
+          <Link href="/movies" className='movies-btn btn'>
+            <h2>MOVIES</h2>
+          </Link>
         </div>
         <div className='login_signup'>
-          <div className='signup-btn btn'>
-            <p2>SIGN UP</p2>
-          </div>
-          <div className='login-btn btn'>
-            <p2>LOGIN</p2>
-          </div>
+          <Link href="/get" className='signup-btn btn'>
+            <h2>SIGN UP</h2>
+          </Link>
+          <Link href="/get" className='login-btn btn'>
+            <h2>LOGIN</h2>
+          </Link>
         </div>
       </nav>
     </main>
