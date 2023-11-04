@@ -11,7 +11,7 @@ export async function GET(req: Request) {
     const res = ``
     return NextResponse.json(res)
   } else {
-    const res = `Registred users: ${search}`
+    const res = `Registered users: ${search}`
     return NextResponse.json(res)
   }
 }

@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Home() {
+export default function Navbar() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between ">
+    <main>
       <nav className='navbar'>
         <div className='nav'>
           <Link href="/" className='home-btn btn'>
@@ -17,10 +17,10 @@ export default function Home() {
           </Link>
         </div>
         <div className='login_signup'>
-          <Link href="/get" className='signup-btn btn'>
+          <Link href="/login" className='signup-btn btn'>
             <h2>SIGN UP</h2>
           </Link>
-          <Link href="/get" className='login-btn btn'>
+          <Link href="/login" className='login-btn btn'>
             <h2>LOGIN</h2>
           </Link>
         </div>

@@ -1,6 +1,7 @@
 "use client"
 
-import { FormEvent, useState } from "react"
+import { FormEvent, useState } from "react";
+import "./get.css"
 
 export default function Get() {
   const [name, setName] = useState("")
@@ -34,7 +35,7 @@ export default function Get() {
   }
 
   return (
-    <>
+    <div className="form-container">
       <div className="max-w-md mx-auto p-6 bg-white shadow-md rounded-lg">
         <form onSubmit={handleRegister}>
           <label htmlFor="datePicker" className="px-2">
@@ -68,6 +69,6 @@ export default function Get() {
           </button>
         </form>
       </div>
-    </>
+    </div>
   )
 }
