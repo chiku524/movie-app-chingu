@@ -30,7 +30,7 @@ import Link from 'next/link'
                     <div className='genre-container'>
                         {genreList.map((genre, index) => (
                             <div className='genre-card' key={index}>
-                                <Link href={`/genre/${genre.name.toLowerCase()}`}>{genre.name}</Link>
+                                <Link href={`/genre/${genre.id}`}>{genre.name}</Link>
                             </div>
                         ))} 
                     </div>

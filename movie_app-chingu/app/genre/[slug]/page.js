@@ -5,7 +5,8 @@ import axios from 'axios'
 import Link from 'next/link'
 
 
-    export default function Navbar() {
+    export default function Genre({params}) {
+        // const [slug] = params;
         const [movieList, setMovieList] = useState([]);
 
         useEffect(() => {
@@ -21,6 +22,8 @@ import Link from 'next/link'
             .catch((error) => {
                 console.log(error);
             })
+
+            console.log(params);
         }, [])
 
         return (
@@ -28,9 +31,9 @@ import Link from 'next/link'
                 <div className='genres'>
                     <h1>Here is a list of movie out in Theaters!</h1>
                     <div className='genre-container'>
-                        {movieList.map((movie, index) => ( movie.genre_ids.includes(12) ? 
+                        {movieList.map((movie, index) => ( movie.genre_ids.includes(+params.slug) ? 
                             <div className='genre-card' key={index}>
-                                <Link href={`/genre/${movie.original_title}`}>{movie.original_title}</Link>
+                                <Link href={`/movie/${movie.original_title}`}>{movie.original_title}</Link>
                             </div>
                         : console.log("No movies found in this genre") ))} 
                     </div>
